@@ -1,0 +1,42 @@
+		<div class="uk-section uk-section-primary uk-padding-remove-top uk-margin-top">
+			<div class="uk-container uk-container-xsmall">
+				<h3 class="center">Distance & Duration Between Two Locations</h3>
+				<%= render "form", search: @search %>
+			</div>
+		</div>
+		<hr>
+		<div class="uk-section uk-section-primary uk-padding-remove-top uk-margin-top">
+			<div class="uk-container uk-container-small">
+
+				<h3 class="center">Search History</h3>
+				<div class="uk-overflow-auto">
+					<table class="uk-table uk-table-hover uk-table-striped">
+						<thead>
+							<tr class="uk-text-bold">
+								<td>Origin</td>
+								<td>Destination</td>
+								<td>Distance</td>
+								<td>Duration</td>
+							</tr>
+						</thead>
+						<tbody>
+						<% @searches.each do |search| %>
+							<tr>
+								<td><%= search.origin %></td>
+								<td><%= search.destination %></td>
+								<td><%= search.distance %></td>
+								<td><%= search.duration %></td>
+							</tr>
+						<% end %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+<script>
+	var input = document.getElementById('origin');
+	var autocomplete = new google.maps.places.Autocomplete(input);
+	var inputtwo = document.getElementById('destination');
+	var autocompletetwo = new google.maps.places.Autocomplete(inputtwo);
+</script>

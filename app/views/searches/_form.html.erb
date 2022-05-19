@@ -1,0 +1,28 @@
+<p>
+	Enter your origin and destination addresses to recieve the distance and travel time between the two.
+</p>
+
+<%= form_with model: @search do |form| %>
+	<div>
+		<%= form.label :origin %><br>
+		<%= form.text_field :origin, class: "uk-input" %>
+	</div>
+
+	<div>
+		<%= form.label :destination %><br>
+		<%= form.text_field :destination, class: "uk-input" %>
+	</div>
+
+		<% flash.each do |type, msg| %>
+  		<% if type == 'error' %>
+  		<div class="result error">
+			<%= raw msg %>
+  		</div>
+  		<% end %>
+		<% end %>
+
+	<div class="uk-margin-top">
+		<%= form.submit "Calculate",
+			class: "uk-button uk-button-secondary" %>
+	</div>
+<% end %>

@@ -1,0 +1,27 @@
+body {
+	background-color: #1263a8;
+/* 	background-color: linear-gradient(135deg, #1263a8 0%, #218be8 100%); */
+/* 	background-color: #b6d064; */
+}
+.uk-logo {
+	margin-left: auto;
+	margin-right: auto;
+}
+.uk-logo img {
+	max-height: 75px;
+}
+h3 {
+	color: #b6d064 !important;
+	text-align: center;
+}
+.result {
+	font-size: 1.5rem;
+	text-align: center;
+	display: block;
+	margin: 2rem 0;
+	color: #fff;
+}
+.error {
+	font-size: 1rem;
+	color: #b6d064 !important;
+}
